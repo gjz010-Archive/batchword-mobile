@@ -31,7 +31,8 @@ function checkCh(ch){
 var uni = ch.charCodeAt(0);
 //如果不在汉字处理范围之内,返回原字符,也可以调用自己的处理函数
 if(uni > 40869 || uni < 19968)
-return ch; //dealWithOthers(ch);
+//return ch; //dealWithOthers(ch);
+return ["#"];
 //检查是否是多音字,是按多音字处理,不是就直接在strChineseFirstPY字符串中找对应的首字母
 return (oMultiDiff[uni]?oMultiDiff[uni]:(strChineseFirstPY.charAt(uni-19968)));
 }
